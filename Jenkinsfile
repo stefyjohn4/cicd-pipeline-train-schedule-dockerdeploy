@@ -55,7 +55,7 @@ pipeline {
                                 transfers: [
                                     sshTransfer(
                                         
-                                        execCommand: 'docker pull sagenext/train-schedule:${env.BUILD_NUMBER} && docker run --restart always --name train-schedule -p 8080:8080 -d willbla/train-schedule:${env.BUILD_NUMBER}'
+                                        execCommand: 'docker pull sagenext/train-schedule:6 && docker run --restart always --name train-schedule -p 8080:8080 -d sagenext/train-schedule:6'
                                     )
                                 ]
                             )
